@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎨 Gemini AI Slide Generator
 
-## Getting Started
+An intelligent **presentation generator** built using **Next.js**, **Google Gemini AI**, and **PptxGenJS**.  
+This app allows users to enter a topic or prompt, automatically generate structured slide content (title, bullet points, image prompts), and download it as a PowerPoint (`.pptx`) file.
 
-First, run the development server:
+---
+
+## 🚀 Features
+
+- ✨ Generate slides instantly using **Gemini 2.5 Flash**
+- 📋 Each slide includes a **title**, **bulleted points**, and **optional image prompts**
+- 💾 Download the presentation as a `.pptx` file
+- 🧠 AI-generated content with smart formatting
+- 🌐 Deployed seamlessly on **Vercel**
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** [Next.js](https://nextjs.org/)
+- **AI Integration:** [Google Generative AI (Gemini)](https://ai.google.dev/)
+- **Presentation Builder:** [PptxGenJS](https://gitbrent.github.io/PptxGenJS/)
+- **Styling:**  MUI (optional)
+- **Hosting:** [Vercel](https://vercel.com/)
+
+---
+
+## ⚙️ Installation
+
+Clone the repository and install dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+git clone https://github.com/yourusername/gemini-slide-generator.git
+cd gemini-slide-generator
+npm install
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+NEXT_PUBLIC_GEMINI_API_KEY=your_gemini_api_key_here
+chat-app-next/
+├── .env.local
+├── .gitignore
+├── README.md                   
+├── package.json
+├── next.config.js
+├── tailwind.config.js
+├── postcss.config.js
+├── tsconfig.json
+├── public/
+│   └── favicon.ico
+├── src/
+│   ├── app/
+│   │   ├── chat/
+│   │   │   ├── page.jsx
+│   │   │   └── components/
+│   │   │       ├── Header.jsx
+│   │   │       ├── ChatLayout.jsx
+│   │   │       ├── MessageList.jsx
+│   │   │       ├── SlidePreview.jsx
+│   │   │       └── InputArea.jsx
+│   │   └── layout.js
+│   ├── hooks/
+│   │   └── useChat.js
+│   ├── lib/
+│   │   ├── gemini.js           # AI Logic
+│   │   └── pptx.js             # PPTX with Images
+│   └── utils/
+│       └── storage.js
+└── components.json
